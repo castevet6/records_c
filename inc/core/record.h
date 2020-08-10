@@ -31,4 +31,18 @@ struct record_t
 
 typedef struct record_t Record;
 
+/*****************************
+ * Record datatype functions *
+ * ***************************
+*/
+
+// Create new empty record, return pointer to dynamically allocated record type
+Record* record_create();
+
+// Delete record. Returns id of deleted record if successful, -1 if delete fail.
+long record_delete(Record*);
+
+// Return string representation of Record type (artist capitalized).
+void record_tostring(Record*, char*);
+
 #endif // RECORD_H
